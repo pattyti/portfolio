@@ -1,6 +1,5 @@
 ---
-title: "/home/lab"
-date: 2026-01-30
+title: "~/lab"
 draft: false
 ---
 

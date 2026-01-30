@@ -20,7 +20,7 @@ menu:
       url: /skills/
       weight: 20
     - identifier: lab
-      name: "/home/lab"
+      name: "~/lab"
       url: /lab/
       weight: 30
     - identifier: posts

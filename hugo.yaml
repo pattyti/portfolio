@@ -12,14 +12,14 @@ params:
 menu:
   main:
     - identifier: about
-      name: About
+      name: "whoami"
       url: /about/
-    - identifier: posts
-      name: Terminal Logs
-      url: /posts/
     - identifier: skills
-      name:"~/bin"
+      name: "~/bin"
       url: /skills/
+    - identifier: lab
+      name: "/home/lab"
+      url: /lab/
     - identifier: posts
-      name: "/var/logs"
+      name: "var/logs"
       url: /posts/

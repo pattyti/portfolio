@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="container">
+    <div class="dashboard-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+        
+        <div class="welcome-section">
+            <h1>{{ .Site.Title }}</h1>
+            <p class="subtitle" style="color: var(--secondary); margin-bottom: 20px;">
+                {{ .Site.Params.Subtitle }}
+            </p>
+            <div class="content">
+                <p><strong>Status:</strong> <span style="color: green;">● Online</span></p>
+                <p>
+                    Welcome to my digital workspace. This site documents my work in Digital Forensics, 
+                    Incident Response, and Security Engineering.
+                </p>
+                <p>
+                    Select a directory from the menu to browse case studies or technical documentation.
+                </p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px;">
+                > tail -n 3 /var/logs
+            </h3>
+            <ul style="list-style: none; padding: 0;">
+                {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+                <li style="margin-bottom: 15px;">
+                    <span style="color: var(--secondary); font-size: 0.8em;">[{{ .Date.Format "2006-01-02" }}]</span><br>
+                    <a href="{{ .RelPermalink }}" style="text-decoration: none; font-weight: bold;">
+                        {{ .Title }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+    </div>
+</div>
+{{ end }}

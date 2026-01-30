@@ -1,6 +1,5 @@
 ---
 title: "Visualizing Forensics: The TLN Vim Profile"
-date: 2026-01-30
 draft: false
 ---
 

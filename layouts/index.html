@@ -10,8 +10,8 @@
             <div class="content">
                 <p><strong>Status:</strong> <span style="color: green;">● Online</span></p>
                 <p>
-                    Welcome to my digital workspace. This site documents my work in Digital Forensics, 
-                    Incident Response, and Security Engineering.
+                    Welcome to my digital workspace. This site documents my work in Digital Forensics, Threat Intelligence,
+                    Incident Response,
                 </p>
                 <p>
                     Select a directory from the menu to browse case studies or technical documentation.
@@ -19,13 +19,14 @@
             </div>
         </div>
 
-        <div class="sidebar">
-            <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px;">
+                <div class="sidebar">
+            <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-top: 0;">
                 > tail -n 3 /var/logs
             </h3>
-            <ul style="list-style: none; padding: 0;">
+            
+            <ul style="list-style: none; padding-left: 0; margin: 0;">
                 {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
-                <li style="margin-bottom: 15px;">
+                <li style="margin-bottom: 15px; margin-left: 0;">
                     <span style="color: var(--secondary); font-size: 0.8em;">[{{ .Date.Format "2006-01-02" }}]</span><br>
                     <a href="{{ .RelPermalink }}" style="text-decoration: none; font-weight: bold;">
                         {{ .Title }}

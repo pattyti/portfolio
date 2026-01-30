@@ -1,0 +1,19 @@
+baseURL: "https://pattyti.github.io/portfolio/"
+languageCode: "en-us"
+title: "Patrick Jones"
+theme: "terminal"
+
+params:
+  themeColor: "green"
+  fullWidthTheme: false
+  centerTheme: true
+  subtitle: "Cybersecurity Operations & DFIR Specialist"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+    - identifier: posts
+      name: Terminal Logs
+      url: /posts/

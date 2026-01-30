@@ -17,3 +17,9 @@ menu:
     - identifier: posts
       name: Terminal Logs
       url: /posts/
+    - identifier: skills
+      name:"~/bin"
+      url: /skills/
+    - identifier: posts
+      name: "/var/logs"
+      url: /posts/

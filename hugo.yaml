@@ -14,12 +14,16 @@ menu:
     - identifier: about
       name: "whoami"
       url: /about/
+      weight: 10
     - identifier: skills
       name: "~/bin"
       url: /skills/
+      weight: 20
     - identifier: lab
       name: "/home/lab"
       url: /lab/
+      weight: 30
     - identifier: posts
       name: "/var/logs"
       url: /posts/
+      weight: 40

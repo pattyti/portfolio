@@ -8,7 +8,9 @@ params:
   fullWidthTheme: false
   centerTheme: true
   subtitle: "Cybersecurity Operations & DFIR Specialist"
-
+  logoText: "Patrick's Terminal"
+  logoHomeLink: "/"
+  
 menu:
   main:
     - identifier: about

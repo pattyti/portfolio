@@ -4,13 +4,13 @@ title: "Patrick Jones"
 theme: "terminal"
 
 params:
-  themeColor: "green"
+  themeColor: "blue"
   fullWidthTheme: false
   centerTheme: true
   subtitle: "Cybersecurity Operations & DFIR Specialist"
   logoText: "Patrick's Terminal"
   logoHomeLink: "/"
-  
+
 menu:
   main:
     - identifier: about

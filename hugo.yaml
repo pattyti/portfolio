@@ -4,7 +4,7 @@ title: "Patrick Jones"
 theme: "terminal"
 
 params:
-  themeColor: "Blue"
+  themeColor: "green"
   fullWidthTheme: false
   centerTheme: true
   subtitle: "Cybersecurity Operations & DFIR Specialist"

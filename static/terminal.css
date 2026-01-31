@@ -31,3 +31,22 @@ a {
 a:hover {
     border-bottom: 1px solid var(--accent);
 }
+
+/* Keep the Terminal/Menu items Monospaced */
+.menu, .logo, .terminal, .nav {
+    font-family: 'Fira Code', 'Courier New', monospace !important;
+    text-transform: none; /* Keeps ~/bin looking like a path */
+}
+
+/* Apply your Formal Typography specifically to the content */
+.post-content, .post-title, p, li {
+    font-family: 'Inter', -apple-system, sans-serif; /* High-readability for reports */
+    line-height: 1.7;
+    color: var(--foreground);
+}
+
+/* Ensure code blocks stay monospaced */
+code, pre {
+    font-family: 'Fira Code', monospace !important;
+    background-color: #f5f0e8; /* Slightly darker than your cream bg for contrast */
+}

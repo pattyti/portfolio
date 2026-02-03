@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
+
+<head><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script>
+    
     <title>LockBit 3.0 Ransomware via Phishing Email :: Patrick Jones</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Executive Summary On August 15, 2024, Acme Co. experienced a LockBit 3.0 ransomware attack that encrypted approximately 2.3TB of data across three file servers and 47 mapped network drives. The initial infection vector was a malicious ZIP attachment opened by an employee accessing personal Gmail on their corporate workstation (ACME-WKS-0247).
 The adversary achieved initial execution at 13:47 UTC, established persistence, disabled Windows Defender and Volume Shadow Copy Service, and began encryption at 14:18 UTC. The attack was detected 5 minutes into the encryption phase when multiple users reported inaccessible files.
@@ -13,59 +14,59 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://pattyti.github.io/portfolio/incidents/example-ransomware-investigation/" />
+<link rel="canonical" href="http://localhost:1313/portfolio/incidents/example-ransomware-investigation/" />
 
 
 
 
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
 
 
-<link rel="stylesheet" href="https://pattyti.github.io/portfolio/terminal.css">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/terminal.css">
 
 
 
 
-<link rel="shortcut icon" href="https://pattyti.github.io/portfolio/favicon.png">
-<link rel="apple-touch-icon" href="https://pattyti.github.io/portfolio/apple-touch-icon.png">
+<link rel="shortcut icon" href="http://localhost:1313/portfolio/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/portfolio/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -78,10 +79,10 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <meta property="og:description" content="Executive Summary On August 15, 2024, Acme Co. experienced a LockBit 3.0 ransomware attack that encrypted approximately 2.3TB of data across three file servers and 47 mapped network drives. The initial infection vector was a malicious ZIP attachment opened by an employee accessing personal Gmail on their corporate workstation (ACME-WKS-0247).
 The adversary achieved initial execution at 13:47 UTC, established persistence, disabled Windows Defender and Volume Shadow Copy Service, and began encryption at 14:18 UTC. The attack was detected 5 minutes into the encryption phase when multiple users reported inaccessible files.
 " />
-<meta property="og:url" content="https://pattyti.github.io/portfolio/incidents/example-ransomware-investigation/" />
+<meta property="og:url" content="http://localhost:1313/portfolio/incidents/example-ransomware-investigation/" />
 <meta property="og:site_name" content="Patrick Jones" />
 
-  <meta property="og:image" content="https://pattyti.github.io/portfolio/og-image.png">
+  <meta property="og:image" content="http://localhost:1313/portfolio/og-image.png">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -101,12 +102,13 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 
 
 </head>
+
 <body>
 
+    
+    <div class="container full">
 
-<div class="container center">
-
-  <header class="header">
+        <header class="header">
   <div class="header__inner">
     <div class="header__logo">
       <a href="/portfolio">
@@ -183,36 +185,95 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 </header>
 
 
-  <div class="content">
-    
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://pattyti.github.io/portfolio/incidents/example-ransomware-investigation/">LockBit 3.0 Ransomware via Phishing Email</a>
-  </h1>
-  <div class="post-meta"><time class="post-date">2024-08-15</time></div>
+        <div class="content">
+            
+<article class="post case-study">
+    <header class="case-header">
+        <h1 class="post-title">LockBit 3.0 Ransomware via Phishing Email</h1>
 
-  
-    <span class="post-tags">
-      
-      #<a href="https://pattyti.github.io/portfolio/tags/ransomware/">ransomware</a>&nbsp;
-      
-      #<a href="https://pattyti.github.io/portfolio/tags/lockbit/">lockbit</a>&nbsp;
-      
-      #<a href="https://pattyti.github.io/portfolio/tags/phishing/">phishing</a>&nbsp;
-      
-      #<a href="https://pattyti.github.io/portfolio/tags/lateral-movement/">lateral-movement</a>&nbsp;
-      
-      #<a href="https://pattyti.github.io/portfolio/tags/windows-forensics/">windows-forensics</a>&nbsp;
-      
-    </span>
-  
-  
+        <div class="case-metadata">
+            <div class="meta-row">
+                <span class="meta-label">Severity:</span>
+                <span class="severity severity-critical">CRITICAL</span>
+            </div>
 
+            <div class="meta-row">
+                <span class="meta-label">Incident Type:</span>
+                <span class="meta-value">Ransomware</span>
+            </div>
 
-  
+            <div class="meta-row">
+                <span class="meta-label">Date Detected:</span>
+                <span class="meta-value">August 15, 2024 14:23 -0500</span>
+            </div>
 
-  <div class="post-content"><div>
-        <h2 id="executive-summary">Executive Summary<a href="#executive-summary" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+            
+            <div class="meta-row">
+                <span class="meta-label">Date Resolved:</span>
+                <span class="meta-value">August 22, 2024 18:00 -0500</span>
+            </div>
+            
+        </div>
+
+        
+        <div class="affected-systems">
+            <span class="meta-label">Affected Systems:</span>
+            <span class="meta-value">1 initial workstation (ACME-WKS-0247), 3 file servers (FS01, FS02, FS03), 47 mapped network drives</span>
+        </div>
+        
+
+        
+        <div class="mitre-section">
+            <div class="meta-label">MITRE ATT&CK Techniques:</div>
+            <div class="mitre-tags">
+                
+                <a href="https://attack.mitre.org/techniques/T1566/001/" target="_blank"
+                    class="mitre-tag" title="T1566.001">
+                    T1566.001
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1204/002/" target="_blank"
+                    class="mitre-tag" title="T1204.002">
+                    T1204.002
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1059/001/" target="_blank"
+                    class="mitre-tag" title="T1059.001">
+                    T1059.001
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1047/" target="_blank"
+                    class="mitre-tag" title="T1047">
+                    T1047
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1486/" target="_blank"
+                    class="mitre-tag" title="T1486">
+                    T1486
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1490/" target="_blank"
+                    class="mitre-tag" title="T1490">
+                    T1490
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1070/001/" target="_blank"
+                    class="mitre-tag" title="T1070.001">
+                    T1070.001
+                </a>
+                
+                <a href="https://attack.mitre.org/techniques/T1021/002/" target="_blank"
+                    class="mitre-tag" title="T1021.002">
+                    T1021.002
+                </a>
+                
+            </div>
+        </div>
+        
+    </header>
+
+    <div class="post-content case-content">
+        <h2 id="executive-summary">Executive Summary</h2>
 <p>On August 15, 2024, Acme Co. experienced a LockBit 3.0 ransomware attack that encrypted approximately 2.3TB of data across three file servers and 47 mapped network drives. The initial infection vector was a malicious ZIP attachment opened by an employee accessing personal Gmail on their corporate workstation (ACME-WKS-0247).</p>
 <p>The adversary achieved initial execution at <strong>13:47 UTC</strong>, established persistence, disabled Windows Defender and Volume Shadow Copy Service, and began encryption at <strong>14:18 UTC</strong>. The attack was detected 5 minutes into the encryption phase when multiple users reported inaccessible files.</p>
 <p><strong>Impact:</strong></p>
@@ -230,7 +291,7 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <li>Zero data exfiltration confirmed</li>
 </ul>
 <hr>
-<h2 id="initial-detection">Initial Detection<a href="#initial-detection" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h2 id="initial-detection">Initial Detection</h2>
 <p><strong>Timeline of Detection:</strong></p>
 <p><strong>14:23:17 UTC</strong> - Multiple help desk tickets submitted reporting &ldquo;files won&rsquo;t open&rdquo; and &ldquo;strange file extensions (.lockbit)&rdquo;</p>
 <p><strong>14:24:03 UTC</strong> - SOC analyst noticed spike in SMB traffic from ACME-WKS-0247 to file servers</p>
@@ -251,8 +312,8 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <li>Network shares inaccessible</li>
 </ul>
 <hr>
-<h2 id="investigation-timeline">Investigation Timeline<a href="#investigation-timeline" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="phase-1-containment-1426---1500-utc">Phase 1: Containment (14:26 - 15:00 UTC)<a href="#phase-1-containment-1426---1500-utc" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="investigation-timeline">Investigation Timeline</h2>
+<h3 id="phase-1-containment-1426---1500-utc">Phase 1: Containment (14:26 - 15:00 UTC)</h3>
 <p><strong>14:26</strong> - Isolated ACME-WKS-0247 from network (switch port disabled)<br>
 <strong>14:28</strong> - Disabled user account <code>jsmith</code> in Active Directory<br>
 <strong>14:30</strong> - Took FS01, FS02, FS03 offline to prevent further encryption<br>
@@ -260,29 +321,29 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <strong>14:42</strong> - Verified backups integrity (last successful backup: 02:00 UTC same day)<br>
 <strong>14:50</strong> - Confirmed no additional compromised systems via EDR sweep<br>
 <strong>14:58</strong> - Network traffic analysis: no ongoing C2 communication detected</p>
-<h3 id="phase-2-forensic-collection-1500---1800-utc">Phase 2: Forensic Collection (15:00 - 18:00 UTC)<a href="#phase-2-forensic-collection-1500---1800-utc" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="phase-2-forensic-collection-1500---1800-utc">Phase 2: Forensic Collection (15:00 - 18:00 UTC)</h3>
 <p><strong>15:15</strong> - Disk image acquired from ACME-WKS-0247 (EnCase FTK Imager)<br>
 <strong>15:45</strong> - Collected Windows Event Logs from affected file servers<br>
 <strong>16:20</strong> - Extracted email from user&rsquo;s Outlook cache (Gmail IMAP sync enabled)<br>
 <strong>16:55</strong> - Captured network traffic logs from firewall and IDS (last 24 hours)<br>
 <strong>17:30</strong> - Collected registry hives and prefetch files from workstation<br>
 <strong>17:45</strong> - Preserved Volume Shadow Copies from file servers (2 copies available)</p>
-<h3 id="phase-3-analysis-1800---2300-utc-day-1">Phase 3: Analysis (18:00 - 23:00 UTC, Day 1)<a href="#phase-3-analysis-1800---2300-utc-day-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="phase-3-analysis-1800---2300-utc-day-1">Phase 3: Analysis (18:00 - 23:00 UTC, Day 1)</h3>
 <p><strong>18:30</strong> - Identified malicious ZIP attachment in Gmail cache<br>
 <strong>19:15</strong> - Extracted and analyzed <code>Invoice_Aug2024.zip</code> (contained obfuscated JavaScript)<br>
 <strong>20:00</strong> - Timeline analysis using Plaso (supertimeline generated)<br>
 <strong>21:10</strong> - Identified initial execution timestamp: 13:47:22 UTC<br>
 <strong>22:00</strong> - Reconstructed attack chain from prefetch, registry, and event logs<br>
 <strong>22:45</strong> - Confirmed LockBit 3.0 variant via binary analysis</p>
-<h3 id="phase-4-recovery-day-2-7">Phase 4: Recovery (Day 2-7)<a href="#phase-4-recovery-day-2-7" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="phase-4-recovery-day-2-7">Phase 4: Recovery (Day 2-7)</h3>
 <p><strong>Day 2</strong> - Rebuilt ACME-WKS-0247 from gold image<br>
 <strong>Day 3-5</strong> - Restored file servers from backups (2.3TB data)<br>
 <strong>Day 6</strong> - Validation testing with business units<br>
 <strong>Day 7</strong> - Full production restoration; incident closed</p>
 <hr>
-<h2 id="technical-analysis">Technical Analysis<a href="#technical-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="key-artifacts-examined">Key Artifacts Examined<a href="#key-artifacts-examined" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<h4 id="1-malicious-email-attachment">1. Malicious Email Attachment<a href="#1-malicious-email-attachment" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h2 id="technical-analysis">Technical Analysis</h2>
+<h3 id="key-artifacts-examined">Key Artifacts Examined</h3>
+<h4 id="1-malicious-email-attachment">1. Malicious Email Attachment</h4>
 <p><strong>File:</strong> <code>Invoice_Aug2024.zip</code><br>
 <strong>SHA256:</strong> <code>7f3e9a2b1c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f</code><br>
 <strong>Contained:</strong> <code>Invoice_Aug2024.js</code> (obfuscated JavaScript)</p>
@@ -292,7 +353,7 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <li>Download URL: <code>hxxp://185.220.101.47/update.exe</code></li>
 <li>Heavy obfuscation using string concatenation and character code manipulation</li>
 </ul>
-<h4 id="2-windows-event-logs">2. Windows Event Logs<a href="#2-windows-event-logs" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="2-windows-event-logs">2. Windows Event Logs</h4>
 <p><strong>Event ID 4688 (Process Creation):</strong></p>
 <pre tabindex="0"><code>13:47:22 - wscript.exe (PID 3428) executed Invoice_Aug2024.js
 13:47:35 - powershell.exe (PID 4192) spawned by wscript.exe
@@ -301,7 +362,7 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <pre tabindex="0"><code>13:48:15 - SeDebugPrivilege assigned to lockbit.exe
 </code></pre><p><strong>Event ID 7045 (Service Installation):</strong></p>
 <pre tabindex="0"><code>13:49:03 - Service &#34;WindowsUpdateCheck&#34; installed (binary: lockbit.exe)
-</code></pre><h4 id="3-prefetch-analysis">3. Prefetch Analysis<a href="#3-prefetch-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+</code></pre><h4 id="3-prefetch-analysis">3. Prefetch Analysis</h4>
 <p><strong>Files Examined:</strong></p>
 <ul>
 <li><code>WSCRIPT.EXE-A3F1D2E4.pf</code> - Execution count: 1, Last run: 13:47:22 UTC</li>
@@ -309,14 +370,14 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 <li><code>LOCKBIT.EXE-C5D3B2E1.pf</code> - Execution count: 1, Last run: 13:47:41 UTC</li>
 </ul>
 <p><strong>Key Finding:</strong> Prefetch confirmed single execution of malicious JavaScript, indicating no prior compromise.</p>
-<h4 id="4-mft-timeline-analysis">4. $MFT Timeline Analysis<a href="#4-mft-timeline-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="4-mft-timeline-analysis">4. $MFT Timeline Analysis</h4>
 <p><strong>Critical Timestamps:</strong></p>
 <pre tabindex="0"><code>13:47:22 - Invoice_Aug2024.js created in Downloads folder
 13:47:41 - lockbit.exe created in %TEMP%
 13:48:30 - Registry modifications (Run key persistence)
 13:52:15 - vssadmin.exe executed (VSS deletion)
 14:18:03 - Mass file encryption begins (first .lockbit extension observed)
-</code></pre><h4 id="5-memory-forensics-volatility-3">5. Memory Forensics (Volatility 3)<a href="#5-memory-forensics-volatility-3" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+</code></pre><h4 id="5-memory-forensics-volatility-3">5. Memory Forensics (Volatility 3)</h4>
 <p><strong>Process Tree:</strong></p>
 <pre tabindex="0"><code>explorer.exe (PID 2184)
   └─ wscript.exe (PID 3428)
@@ -326,7 +387,7 @@ The adversary achieved initial execution at 13:47 UTC, established persistence, 
 </code></pre><p><strong>Network Connections:</strong></p>
 <pre tabindex="0"><code>lockbit.exe (PID 4856) -&gt; 185.220.101.47:8443 (ESTABLISHED)
 </code></pre><p><strong>Injected Code:</strong> Process hollowing detected in <code>svchost.exe</code> (PID 1832)</p>
-<h4 id="6-registry-analysis">6. Registry Analysis<a href="#6-registry-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="6-registry-analysis">6. Registry Analysis</h4>
 <p><strong>Persistence Mechanism:</strong></p>
 <pre tabindex="0"><code>HKCU\Software\Microsoft\Windows\CurrentVersion\Run
 Value: &#34;WindowsSecurityUpdate&#34;
@@ -334,62 +395,62 @@ Data: &#34;C:\Users\jsmith\AppData\Local\Temp\lockbit.exe&#34;
 </code></pre><p><strong>Defender Exclusions Added:</strong></p>
 <pre tabindex="0"><code>HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths
 Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
-</code></pre><h4 id="7-volume-shadow-copy-analysis">7. Volume Shadow Copy Analysis<a href="#7-volume-shadow-copy-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+</code></pre><h4 id="7-volume-shadow-copy-analysis">7. Volume Shadow Copy Analysis</h4>
 <p><strong>Finding:</strong> All VSS copies deleted via <code>vssadmin.exe Delete Shadows /All /Quiet</code></p>
 <p><strong>Event ID 8222 (VSS Deletion):</strong></p>
 <pre tabindex="0"><code>13:52:15 - Shadow copies deleted by vssadmin.exe (PID 5012)
 </code></pre><hr>
-<h3 id="attack-chain-reconstruction">Attack Chain Reconstruction<a href="#attack-chain-reconstruction" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<h4 id="stage-1-initial-access-134722-utc">Stage 1: Initial Access (13:47:22 UTC)<a href="#stage-1-initial-access-134722-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h3 id="attack-chain-reconstruction">Attack Chain Reconstruction</h3>
+<h4 id="stage-1-initial-access-134722-utc">Stage 1: Initial Access (13:47:22 UTC)</h4>
 <ol>
 <li>User <code>jsmith</code> accessed personal Gmail via Chrome browser</li>
 <li>Opened email with subject &ldquo;Invoice Payment Overdue - Urgent&rdquo;</li>
 <li>Downloaded attachment <code>Invoice_Aug2024.zip</code></li>
 <li>Extracted and double-clicked <code>Invoice_Aug2024.js</code></li>
 </ol>
-<h4 id="stage-2-execution-134735-utc">Stage 2: Execution (13:47:35 UTC)<a href="#stage-2-execution-134735-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-2-execution-134735-utc">Stage 2: Execution (13:47:35 UTC)</h4>
 <ol>
 <li>JavaScript executed via <code>wscript.exe</code></li>
 <li>PowerShell spawned with <code>-ExecutionPolicy Bypass -WindowStyle Hidden</code></li>
 <li>Downloaded <code>lockbit.exe</code> from <code>185.220.101.47</code></li>
 <li>Saved to <code>C:\Users\jsmith\AppData\Local\Temp\lockbit.exe</code></li>
 </ol>
-<h4 id="stage-3-persistence-134830-utc">Stage 3: Persistence (13:48:30 UTC)<a href="#stage-3-persistence-134830-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-3-persistence-134830-utc">Stage 3: Persistence (13:48:30 UTC)</h4>
 <ol>
 <li>Registry Run key created for auto-start</li>
 <li>Service &ldquo;WindowsUpdateCheck&rdquo; installed</li>
 <li>Scheduled task created (backup persistence)</li>
 </ol>
-<h4 id="stage-4-defense-evasion-134915-utc">Stage 4: Defense Evasion (13:49:15 UTC)<a href="#stage-4-defense-evasion-134915-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-4-defense-evasion-134915-utc">Stage 4: Defense Evasion (13:49:15 UTC)</h4>
 <ol>
 <li>Windows Defender disabled via registry modification</li>
 <li>Exclusion paths added to Defender configuration</li>
 <li>Event log clearing attempted (failed due to permissions)</li>
 </ol>
-<h4 id="stage-5-privilege-escalation-135000-utc">Stage 5: Privilege Escalation (13:50:00 UTC)<a href="#stage-5-privilege-escalation-135000-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-5-privilege-escalation-135000-utc">Stage 5: Privilege Escalation (13:50:00 UTC)</h4>
 <ol>
 <li>UAC bypass via <code>fodhelper.exe</code> registry hijack</li>
 <li>Elevated process spawned with SYSTEM privileges</li>
 </ol>
-<h4 id="stage-6-discovery-135030-utc">Stage 6: Discovery (13:50:30 UTC)<a href="#stage-6-discovery-135030-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-6-discovery-135030-utc">Stage 6: Discovery (13:50:30 UTC)</h4>
 <ol>
 <li>Network share enumeration via <code>net view</code> and <code>net use</code></li>
 <li>Active Directory query for file server locations</li>
 <li>SMB connection testing to FS01, FS02, FS03</li>
 </ol>
-<h4 id="stage-7-lateral-movement-135500-utc">Stage 7: Lateral Movement (13:55:00 UTC)<a href="#stage-7-lateral-movement-135500-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-7-lateral-movement-135500-utc">Stage 7: Lateral Movement (13:55:00 UTC)</h4>
 <ol>
 <li>Mapped network drives accessed using user&rsquo;s cached credentials</li>
 <li>Ransomware binary copied to <code>\\FS01\C$\Windows\Temp\</code></li>
 <li>Remote execution via WMI (<code>wmic</code> command)</li>
 </ol>
-<h4 id="stage-8-impact---vss-deletion-135215-utc">Stage 8: Impact - VSS Deletion (13:52:15 UTC)<a href="#stage-8-impact---vss-deletion-135215-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-8-impact---vss-deletion-135215-utc">Stage 8: Impact - VSS Deletion (13:52:15 UTC)</h4>
 <ol>
 <li><code>vssadmin.exe Delete Shadows /All /Quiet</code> executed</li>
 <li>All Volume Shadow Copies destroyed</li>
 <li>Windows Backup catalog deleted</li>
 </ol>
-<h4 id="stage-9-impact---encryption-141803-utc">Stage 9: Impact - Encryption (14:18:03 UTC)<a href="#stage-9-impact---encryption-141803-utc" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="stage-9-impact---encryption-141803-utc">Stage 9: Impact - Encryption (14:18:03 UTC)</h4>
 <ol>
 <li>Encryption started on local drives (C:, D:)</li>
 <li>Network shares encrypted via SMB (FS01, FS02, FS03)</li>
@@ -398,10 +459,10 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 <li>Wallpaper changed to ransom message</li>
 </ol>
 <hr>
-<h2 id="root-cause-analysis">Root Cause Analysis<a href="#root-cause-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="primary-root-cause">Primary Root Cause<a href="#primary-root-cause" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="root-cause-analysis">Root Cause Analysis</h2>
+<h3 id="primary-root-cause">Primary Root Cause</h3>
 <p><strong>Unrestricted personal webmail access on corporate workstations</strong> combined with <strong>insufficient email security controls</strong> allowed the initial infection vector.</p>
-<h3 id="contributing-factors">Contributing Factors<a href="#contributing-factors" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="contributing-factors">Contributing Factors</h3>
 <ol>
 <li><strong>Policy Violation:</strong> Corporate policy prohibited personal email access, but technical controls were not enforced</li>
 <li><strong>Endpoint Protection Gap:</strong> Windows Defender was the sole AV solution; no EDR with behavioral detection</li>
@@ -410,7 +471,7 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 <li><strong>Insufficient User Training:</strong> User did not recognize phishing indicators (external sender, urgency, unexpected attachment)</li>
 <li><strong>No Email Sandboxing:</strong> Personal webmail attachments bypassed corporate email gateway protections</li>
 </ol>
-<h3 id="security-control-failures">Security Control Failures<a href="#security-control-failures" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="security-control-failures">Security Control Failures</h3>
 <table>
   <thead>
       <tr>
@@ -460,8 +521,8 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
   </tbody>
 </table>
 <hr>
-<h2 id="containment--eradication">Containment &amp; Eradication<a href="#containment--eradication" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="immediate-actions-first-hour">Immediate Actions (First Hour)<a href="#immediate-actions-first-hour" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="containment--eradication">Containment &amp; Eradication</h2>
+<h3 id="immediate-actions-first-hour">Immediate Actions (First Hour)</h3>
 <ol>
 <li>
 <p><strong>Network Isolation</strong></p>
@@ -487,14 +548,14 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 </ul>
 </li>
 </ol>
-<h3 id="forensic-preservation">Forensic Preservation<a href="#forensic-preservation" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="forensic-preservation">Forensic Preservation</h3>
 <ol>
 <li><strong>Memory Dumps:</strong> Captured RAM from ACME-WKS-0247 before shutdown</li>
 <li><strong>Disk Images:</strong> Full forensic images of workstation and file servers</li>
 <li><strong>Log Collection:</strong> Centralized all event logs, network logs, and EDR telemetry</li>
 <li><strong>Email Preservation:</strong> Exported user&rsquo;s mailbox for evidence</li>
 </ol>
-<h3 id="eradication-steps">Eradication Steps<a href="#eradication-steps" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="eradication-steps">Eradication Steps</h3>
 <ol>
 <li>
 <p><strong>Workstation Rebuild</strong></p>
@@ -530,8 +591,8 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 </li>
 </ol>
 <hr>
-<h2 id="remediation--hardening">Remediation &amp; Hardening<a href="#remediation--hardening" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="immediate-remediations-week-1">Immediate Remediations (Week 1)<a href="#immediate-remediations-week-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="remediation--hardening">Remediation &amp; Hardening</h2>
+<h3 id="immediate-remediations-week-1">Immediate Remediations (Week 1)</h3>
 <ol>
 <li>
 <p><strong>Web Proxy Configuration</strong></p>
@@ -566,7 +627,7 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 </ul>
 </li>
 </ol>
-<h3 id="long-term-hardening-month-1-3">Long-Term Hardening (Month 1-3)<a href="#long-term-hardening-month-1-3" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="long-term-hardening-month-1-3">Long-Term Hardening (Month 1-3)</h3>
 <ol>
 <li>
 <p><strong>Network Segmentation</strong></p>
@@ -618,29 +679,29 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 </li>
 </ol>
 <hr>
-<h2 id="lessons-learned">Lessons Learned<a href="#lessons-learned" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="what-went-well">What Went Well<a href="#what-went-well" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="what-went-well">What Went Well</h3>
 <ol>
 <li><strong>Backup Strategy:</strong> Offline backups prevented total data loss; 12-hour RPO was acceptable</li>
 <li><strong>Incident Response Speed:</strong> Detection to containment in 3 minutes prevented wider spread</li>
 <li><strong>Team Coordination:</strong> IR team, IT, and business units worked seamlessly</li>
 <li><strong>Forensic Preservation:</strong> Proper evidence collection enabled thorough root cause analysis</li>
 </ol>
-<h3 id="what-went-wrong">What Went Wrong<a href="#what-went-wrong" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="what-went-wrong">What Went Wrong</h3>
 <ol>
 <li><strong>Policy Enforcement Gap:</strong> Personal webmail policy existed but wasn&rsquo;t technically enforced</li>
 <li><strong>Endpoint Protection Inadequacy:</strong> Signature-based AV failed against obfuscated malware</li>
 <li><strong>Excessive Permissions:</strong> User had unnecessary write access to critical file servers</li>
 <li><strong>Detection Delay:</strong> 31 minutes elapsed between initial execution and detection</li>
 </ol>
-<h3 id="what-would-i-do-differently">What Would I Do Differently?<a href="#what-would-i-do-differently" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="what-would-i-do-differently">What Would I Do Differently?</h3>
 <ol>
 <li><strong>Proactive Threat Hunting:</strong> Regular hunts for anomalous PowerShell and script execution</li>
 <li><strong>Faster Isolation:</strong> Automated EDR containment would have prevented lateral movement</li>
 <li><strong>Email Sandboxing:</strong> Even personal webmail attachments should be inspected via proxy</li>
 <li><strong>Network Segmentation:</strong> Should have been in place before incident; prevented lateral movement</li>
 </ol>
-<h3 id="key-takeaways">Key Takeaways<a href="#key-takeaways" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="key-takeaways">Key Takeaways</h3>
 <blockquote>
 <p><strong>Personal webmail is a critical blind spot.</strong> If you can&rsquo;t block it, you must inspect it.</p>
 </blockquote>
@@ -654,8 +715,8 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 <p><strong>EDR &gt; AV.</strong> Behavioral detection would have caught the PowerShell execution and process injection immediately.</p>
 </blockquote>
 <hr>
-<h2 id="mitre-attck-mapping">MITRE ATT&amp;CK Mapping<a href="#mitre-attck-mapping" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="detailed-technique-analysis">Detailed Technique Analysis<a href="#detailed-technique-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="mitre-attck-mapping">MITRE ATT&amp;CK Mapping</h2>
+<h3 id="detailed-technique-analysis">Detailed Technique Analysis</h3>
 <table>
   <thead>
       <tr>
@@ -752,7 +813,7 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
       </tr>
   </tbody>
 </table>
-<h3 id="attack-flow-diagram">Attack Flow Diagram<a href="#attack-flow-diagram" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="attack-flow-diagram">Attack Flow Diagram</h3>
 <pre tabindex="0"><code>[T1566.001] Phishing Email
       ↓
 [T1204.002] User Opens Attachment
@@ -772,7 +833,7 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 [T1490] Delete Volume Shadow Copies
       ↓
 [T1486] Ransomware Encryption
-</code></pre><h3 id="detection-opportunities-by-technique">Detection Opportunities by Technique<a href="#detection-opportunities-by-technique" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+</code></pre><h3 id="detection-opportunities-by-technique">Detection Opportunities by Technique</h3>
 <table>
   <thead>
       <tr>
@@ -814,20 +875,293 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 <strong>Report Date:</strong> August 23, 2024<br>
 <strong>Classification:</strong> Sanitized Case Study</p>
 
-      </div></div>
+    </div>
 
-  
-
-  
-    
-
-  
+    <footer class="case-footer">
+        <a href="/portfolio/incidents/" class="back-link">← Back to Case Studies</a>
+    </footer>
 </article>
 
-  </div>
+<style>
+    .case-study {
+        max-width: 1400px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 
-  
-    <footer class="footer">
+    .case-header {
+        background: var(--code-bg, #f5f0e8);
+        border: 2px solid var(--accent, #df7020);
+        border-radius: 4px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .case-header .post-title {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        color: var(--accent, #df7020);
+    }
+
+    .case-metadata {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .meta-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .affected-systems {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: var(--background, #fffbf7);
+        border-radius: 4px;
+        border: 1px solid var(--border-color, #df7020);
+    }
+
+    .meta-label {
+        font-weight: bold;
+        color: var(--foreground, #45372b);
+        opacity: 0.8;
+        white-space: nowrap;
+    }
+
+    .meta-value {
+        color: var(--foreground, #45372b);
+        flex: 1;
+    }
+
+    .severity {
+        padding: 4px 12px;
+        border-radius: 3px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+    }
+
+    .severity-critical {
+        background: #ff4444;
+        color: white;
+    }
+
+    .severity-high {
+        background: #ff8800;
+        color: white;
+    }
+
+    .severity-medium {
+        background: #ffbb00;
+        color: #000;
+    }
+
+    .severity-low {
+        background: #00aa00;
+        color: white;
+    }
+
+    .mitre-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 2px solid var(--border-color, #df7020);
+    }
+
+    .mitre-section .meta-label {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .mitre-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .mitre-tag {
+        background: var(--accent, #df7020);
+        color: var(--background, #fffbf7);
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-family: monospace;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        position: relative;
+        display: inline-block;
+    }
+
+    .mitre-tag:hover {
+        background: var(--foreground, #45372b);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .case-content {
+        line-height: 1.8;
+    }
+
+    .case-content h2 {
+        color: var(--accent, #df7020);
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--accent, #df7020);
+    }
+
+    .case-content h3 {
+        color: var(--accent, #df7020);
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .case-content h4 {
+        color: var(--foreground, #45372b);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .case-content blockquote {
+        background: var(--code-bg, #f5f0e8);
+        border-left: 4px solid var(--accent, #df7020);
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+    }
+
+    .case-content blockquote p {
+        margin: 0.5rem 0;
+    }
+
+    .case-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .case-content table th {
+        background: var(--accent, #df7020);
+        color: var(--background, #fffbf7);
+        padding: 0.75rem;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .case-content table td {
+        padding: 0.75rem;
+        border: 1px solid var(--border-color, #df7020);
+    }
+
+    .case-content table tr:nth-child(even) {
+        background: var(--code-bg, #f5f0e8);
+    }
+
+    .case-content code {
+        background: var(--code-bg, #f5f0e8);
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 0.9em;
+        color: var(--accent, #df7020);
+        font-weight: bold;
+    }
+
+    .case-content pre {
+        background: var(--code-bg, #f5f0e8);
+        border: 1px solid var(--border-color, #df7020);
+        border-radius: 4px;
+        padding: 1rem;
+        overflow-x: auto;
+        margin: 1rem 0;
+    }
+
+    .case-content pre code {
+        background: transparent;
+        padding: 0;
+        color: var(--foreground, #45372b);
+        font-weight: normal;
+    }
+
+    .case-footer {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid var(--accent, #df7020);
+    }
+
+    .back-link {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: var(--accent, #df7020);
+        color: var(--background, #fffbf7);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    .back-link:hover {
+        background: var(--foreground, #45372b);
+        transform: translateX(-4px);
+    }
+
+     
+    @media (max-width: 1200px) {
+        .case-study {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .case-study {
+            padding: 0 0.5rem;
+        }
+
+        .case-header {
+            padding: 1.5rem;
+        }
+
+        .case-metadata {
+            grid-template-columns: 1fr;
+        }
+
+        .meta-row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .case-content table {
+            font-size: 0.85rem;
+        }
+
+        .case-content table th,
+        .case-content table td {
+            padding: 0.5rem;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        .case-study {
+            max-width: 1600px;
+        }
+    }
+</style>
+
+        </div>
+
+        
+        <footer class="footer">
   <div class="footer__inner">
     
       <div class="copyright">
@@ -849,8 +1183,9 @@ Value: &#34;C:\Users\jsmith\AppData\Local\Temp\&#34;
 
 
 
-  
-</div>
+        
+    </div>
 
 </body>
+
 </html>

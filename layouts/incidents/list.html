@@ -1,0 +1,271 @@
+{{ define "main" }}
+<div class="incidents-container">
+    <!-- Main Content Area -->
+    <div class="incidents-main">
+        <article class="post">
+            <h1 class="post-title">{{ .Title }}</h1>
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+
+    <!-- Sidebar for Case Studies -->
+    <aside class="incidents-sidebar">
+        <div class="sidebar-sticky">
+            <h3>📁 Case Studies</h3>
+            <div class="case-list">
+                {{ range .Pages }}
+                {{ if not .Params.hidden }}
+                <div class="case-item">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="case-title">{{ .Title }}</div>
+                        <div class="case-meta">
+                            <span class="severity severity-{{ .Params.severity }}">{{ .Params.severity | upper }}</span>
+                            <span class="incident-type">{{ .Params.incident_type }}</span>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+                {{ end }}
+
+                {{ if eq (len .Pages) 0 }}
+                <div class="no-cases">
+                    <p>No case studies published yet.</p>
+                    <p style="font-size: 0.9em; opacity: 0.7;">Check back soon for detailed incident investigations.</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </aside>
+</div>
+
+<style>
+    .incidents-container {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 2.5rem;
+        max-width: 1600px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .incidents-main {
+        min-width: 0;
+        /* Prevents grid blowout */
+    }
+
+    .incidents-sidebar {
+        position: relative;
+    }
+
+    .sidebar-sticky {
+        position: sticky;
+        top: 2rem;
+        background: var(--code-bg, #f5f0e8);
+        border: 2px solid var(--accent, #df7020);
+        border-radius: 4px;
+        padding: 1.5rem;
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+    }
+
+    .sidebar-sticky h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: var(--accent, #df7020);
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(--accent, #df7020);
+        padding-bottom: 0.5rem;
+    }
+
+    .case-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .case-item {
+        background: var(--background, #fffbf7);
+        border: 1px solid var(--border-color, #df7020);
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    .case-item:hover {
+        transform: translateX(4px);
+        box-shadow: -4px 4px 0 var(--accent, #df7020);
+    }
+
+    .case-item a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--foreground, #45372b);
+    }
+
+    .case-title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--foreground, #45372b);
+    }
+
+    .case-meta {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+    }
+
+    .severity {
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+    }
+
+    .severity-critical {
+        background: #ff4444;
+        color: white;
+    }
+
+    .severity-high {
+        background: #ff8800;
+        color: white;
+    }
+
+    .severity-medium {
+        background: #ffbb00;
+        color: #000;
+    }
+
+    .severity-low {
+        background: #00aa00;
+        color: white;
+    }
+
+    .incident-type {
+        background: var(--code-bg, #f5f0e8);
+        padding: 2px 8px;
+        border-radius: 3px;
+        border: 1px solid var(--border-color, #df7020);
+    }
+
+    .no-cases {
+        text-align: center;
+        padding: 2rem 1rem;
+        opacity: 0.6;
+    }
+
+    /* Collapsible Framework Sections */
+    .framework-section {
+        margin: 2rem 0;
+        border: 2px solid var(--accent, #df7020);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .framework-section summary {
+        background: var(--code-bg, #f5f0e8);
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--accent, #df7020);
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: background 0.2s ease;
+    }
+
+    .framework-section summary:hover {
+        background: var(--accent, #df7020);
+        color: var(--background, #fffbf7);
+    }
+
+    .framework-section summary::marker {
+        content: '▶ ';
+        font-size: 0.8em;
+    }
+
+    .framework-section[open] summary::marker {
+        content: '▼ ';
+    }
+
+    .framework-content {
+        padding: 1.5rem;
+        background: var(--background, #fffbf7);
+    }
+
+    .framework-content h4 {
+        color: var(--accent, #df7020);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .framework-content h4:first-child {
+        margin-top: 0;
+    }
+
+    .framework-content ul {
+        margin: 0.5rem 0;
+    }
+
+    .framework-content ol {
+        margin: 0.5rem 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .incidents-container {
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .incidents-container {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        .incidents-sidebar {
+            order: -1;
+            /* Move sidebar above content on mobile */
+        }
+
+        .sidebar-sticky {
+            position: static;
+            max-height: none;
+        }
+    }
+
+    @media (min-width: 1800px) {
+        .incidents-container {
+            max-width: 1800px;
+        }
+    }
+
+    /* Custom scrollbar for sidebar */
+    .sidebar-sticky::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .sidebar-sticky::-webkit-scrollbar-track {
+        background: var(--background, #fffbf7);
+    }
+
+    .sidebar-sticky::-webkit-scrollbar-thumb {
+        background: var(--accent, #df7020);
+        border-radius: 4px;
+    }
+
+    .sidebar-sticky::-webkit-scrollbar-thumb:hover {
+        background: var(--foreground, #45372b);
+    }
+</style>
+{{ end }}

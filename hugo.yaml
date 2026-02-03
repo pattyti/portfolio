@@ -3,6 +3,11 @@ languageCode: "en-us"
 title: "Patrick Jones"
 theme: "terminal"
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   themeColor: "green"
   fullWidthTheme: false

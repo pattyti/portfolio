@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
+
+<head><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script>
+    
     <title>/cases :: Patrick Jones</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Incident Case Studies This section contains sanitized, real-world incident investigations from my career in DFIR and SOC operations. Each case study is structured to provide:
 Technical depth: Artifact-level analysis, not just high-level summaries Methodology: The investigative process, including dead ends and pivots MITRE ATT&amp;CK mapping: Precise technique identification for threat modeling Lessons learned: What worked, what didn&rsquo;t, and how to improve Investigation Frameworks by Incident Type Before diving into specific cases, understanding the investigative approach for different incident categories is critical. Each incident type has unique artifacts, telemetry sources, and potential pitfalls.
@@ -13,59 +14,59 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://pattyti.github.io/portfolio/incidents/" />
+<link rel="canonical" href="http://localhost:1313/portfolio/incidents/" />
 
 
 
 
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
 
   
-  <link rel="stylesheet" href="https://pattyti.github.io/portfolio/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
 
 
-<link rel="stylesheet" href="https://pattyti.github.io/portfolio/terminal.css">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/terminal.css">
 
 
 
 
-<link rel="shortcut icon" href="https://pattyti.github.io/portfolio/favicon.png">
-<link rel="apple-touch-icon" href="https://pattyti.github.io/portfolio/apple-touch-icon.png">
+<link rel="shortcut icon" href="http://localhost:1313/portfolio/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/portfolio/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -78,10 +79,10 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <meta property="og:description" content="Incident Case Studies This section contains sanitized, real-world incident investigations from my career in DFIR and SOC operations. Each case study is structured to provide:
 Technical depth: Artifact-level analysis, not just high-level summaries Methodology: The investigative process, including dead ends and pivots MITRE ATT&amp;CK mapping: Precise technique identification for threat modeling Lessons learned: What worked, what didn&rsquo;t, and how to improve Investigation Frameworks by Incident Type Before diving into specific cases, understanding the investigative approach for different incident categories is critical. Each incident type has unique artifacts, telemetry sources, and potential pitfalls.
 " />
-<meta property="og:url" content="https://pattyti.github.io/portfolio/incidents/" />
+<meta property="og:url" content="http://localhost:1313/portfolio/incidents/" />
 <meta property="og:site_name" content="Patrick Jones" />
 
-  <meta property="og:image" content="https://pattyti.github.io/portfolio/og-image.png">
+  <meta property="og:image" content="http://localhost:1313/portfolio/og-image.png">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -103,12 +104,13 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 
 
 </head>
+
 <body>
 
+    
+    <div class="container full">
 
-<div class="container center">
-
-  <header class="header">
+        <header class="header">
   <div class="header__inner">
     <div class="header__logo">
       <a href="/portfolio">
@@ -185,11 +187,16 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 </header>
 
 
-  <div class="content">
+        <div class="content">
+            
+<div class="incidents-container">
     
-  
-    <div class="index-content">
-      <h1 id="incident-case-studies">Incident Case Studies</h1>
+    <div class="incidents-main">
+        <article class="post">
+            <h1 class="post-title">/cases</h1>
+
+            <div class="post-content">
+                <h1 id="incident-case-studies">Incident Case Studies</h1>
 <p>This section contains sanitized, real-world incident investigations from my career in DFIR and SOC operations. Each case study is structured to provide:</p>
 <ul>
 <li><strong>Technical depth:</strong> Artifact-level analysis, not just high-level summaries</li>
@@ -200,8 +207,11 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <hr>
 <h2 id="investigation-frameworks-by-incident-type">Investigation Frameworks by Incident Type</h2>
 <p>Before diving into specific cases, understanding the investigative approach for different incident categories is critical. Each incident type has unique artifacts, telemetry sources, and potential pitfalls.</p>
-<h3 id="ransomware-investigations">Ransomware Investigations</h3>
-<p><strong>Priority Artifacts:</strong></p>
+<p><strong>Click each incident type below to view the investigation framework:</strong></p>
+<details class="framework-section">
+<summary>🔒 Ransomware Investigations</summary>
+<div class="framework-content">
+<h4 id="priority-artifacts">Priority Artifacts:</h4>
 <ul>
 <li>Volume Shadow Copies (often deleted by adversary)</li>
 <li>Windows Event Logs (Security, System, Application)</li>
@@ -209,22 +219,25 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <li>$MFT and $UsnJrnl (file system timeline)</li>
 <li>Memory dumps (encryption keys, process injection)</li>
 </ul>
-<p><strong>Critical Questions:</strong></p>
+<h4 id="critical-questions">Critical Questions:</h4>
 <ol>
 <li>What was the initial access vector?</li>
 <li>How long was the adversary present before encryption?</li>
 <li>Were credentials compromised?</li>
 <li>Was data exfiltrated before encryption?</li>
 </ol>
-<p><strong>Common Pitfalls:</strong></p>
+<h4 id="common-pitfalls">Common Pitfalls:</h4>
 <ul>
 <li>Focusing only on the ransomware binary, missing the initial compromise</li>
 <li>Assuming encryption timestamp = breach timestamp</li>
 <li>Overlooking lateral movement artifacts</li>
 </ul>
-<hr>
-<h3 id="data-exfiltration">Data Exfiltration</h3>
-<p><strong>Priority Artifacts:</strong></p>
+</div>
+</details>
+<details class="framework-section">
+<summary>📤 Data Exfiltration</summary>
+<div class="framework-content">
+<h4 id="priority-artifacts-1">Priority Artifacts:</h4>
 <ul>
 <li>Network traffic captures (PCAP analysis)</li>
 <li>Proxy logs and DNS queries</li>
@@ -232,22 +245,25 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <li>USB device connection history (USBSTOR registry)</li>
 <li>Email server logs</li>
 </ul>
-<p><strong>Critical Questions:</strong></p>
+<h4 id="critical-questions-1">Critical Questions:</h4>
 <ol>
 <li>What data was accessed?</li>
 <li>What was the exfiltration method? (Cloud storage, email, removable media, C2 channel)</li>
 <li>Was the exfiltration automated or manual?</li>
 <li>How was access to sensitive data obtained?</li>
 </ol>
-<p><strong>Common Pitfalls:</strong></p>
+<h4 id="common-pitfalls-1">Common Pitfalls:</h4>
 <ul>
 <li>Relying solely on DLP alerts (often incomplete)</li>
 <li>Missing encrypted exfiltration channels</li>
 <li>Failing to identify the full scope of compromised data</li>
 </ul>
-<hr>
-<h3 id="insider-threats">Insider Threats</h3>
-<p><strong>Priority Artifacts:</strong></p>
+</div>
+</details>
+<details class="framework-section">
+<summary>👤 Insider Threats</summary>
+<div class="framework-content">
+<h4 id="priority-artifacts-2">Priority Artifacts:</h4>
 <ul>
 <li>User activity logs (VPN, authentication, file access)</li>
 <li>Email and chat communications (legal approval required)</li>
@@ -255,22 +271,25 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <li>Print spooler logs</li>
 <li>Physical access logs</li>
 </ul>
-<p><strong>Critical Questions:</strong></p>
+<h4 id="critical-questions-2">Critical Questions:</h4>
 <ol>
 <li>Was this malicious or negligent?</li>
 <li>What was the user&rsquo;s access level and normal behavior baseline?</li>
 <li>Were credentials shared or compromised?</li>
 <li>What was the timeline of suspicious activity?</li>
 </ol>
-<p><strong>Common Pitfalls:</strong></p>
+<h4 id="common-pitfalls-2">Common Pitfalls:</h4>
 <ul>
 <li>Confirmation bias (assuming guilt)</li>
 <li>Insufficient baseline of normal user behavior</li>
 <li>Privacy and legal considerations not properly addressed</li>
 </ul>
-<hr>
-<h3 id="business-email-compromise-bec">Business Email Compromise (BEC)</h3>
-<p><strong>Priority Artifacts:</strong></p>
+</div>
+</details>
+<details class="framework-section">
+<summary>📧 Business Email Compromise (BEC)</summary>
+<div class="framework-content">
+<h4 id="priority-artifacts-3">Priority Artifacts:</h4>
 <ul>
 <li>Email headers (full RFC 822 format)</li>
 <li>Mail server logs (Exchange, O365)</li>
@@ -278,22 +297,25 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <li>Authentication logs (MFA bypass attempts)</li>
 <li>Financial transaction records</li>
 </ul>
-<p><strong>Critical Questions:</strong></p>
+<h4 id="critical-questions-3">Critical Questions:</h4>
 <ol>
 <li>Was the account compromised or spoofed?</li>
 <li>Were mailbox rules created for persistence?</li>
 <li>What was the social engineering technique?</li>
 <li>How many users were targeted?</li>
 </ol>
-<p><strong>Common Pitfalls:</strong></p>
+<h4 id="common-pitfalls-3">Common Pitfalls:</h4>
 <ul>
 <li>Focusing only on the final fraudulent email</li>
 <li>Missing mailbox rule persistence mechanisms</li>
 <li>Inadequate analysis of email routing and authentication</li>
 </ul>
-<hr>
-<h3 id="web-application-compromise">Web Application Compromise</h3>
-<p><strong>Priority Artifacts:</strong></p>
+</div>
+</details>
+<details class="framework-section">
+<summary>🌐 Web Application Compromise</summary>
+<div class="framework-content">
+<h4 id="priority-artifacts-4">Priority Artifacts:</h4>
 <ul>
 <li>Web server access logs (Apache, Nginx, IIS)</li>
 <li>Application logs</li>
@@ -301,82 +323,287 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 <li>WAF logs</li>
 <li>File integrity monitoring alerts</li>
 </ul>
-<p><strong>Critical Questions:</strong></p>
+<h4 id="critical-questions-4">Critical Questions:</h4>
 <ol>
 <li>What vulnerability was exploited?</li>
 <li>Was a web shell deployed?</li>
 <li>What level of access did the adversary achieve?</li>
 <li>Was the database compromised?</li>
 </ol>
-<p><strong>Common Pitfalls:</strong></p>
+<h4 id="common-pitfalls-4">Common Pitfalls:</h4>
 <ul>
 <li>Log rotation destroying critical evidence</li>
 <li>Focusing on the exploit, missing post-exploitation activity</li>
 <li>Insufficient understanding of application architecture</li>
 </ul>
+</div>
+</details>
 <hr>
 <h2 id="case-studies">Case Studies</h2>
-<p>Below are detailed investigations from real incidents (sanitized to protect confidentiality):</p>
+<p>Below are detailed sample investigations from my career in DFIR and SOC operations. These are not real incidents, but rather simulations of real incidents.</p>
+<!-- Individual case studies will be added here -->
 
+            </div>
+        </article>
     </div>
-  
-  <div class="posts">
+
     
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="https://pattyti.github.io/portfolio/incidents/example-ransomware-investigation/">LockBit 3.0 Ransomware via Phishing Email</a>
-        </h2>
-        <div class="post-meta"><time class="post-date">2024-08-15</time></div>
+    <aside class="incidents-sidebar">
+        <div class="sidebar-sticky">
+            <h3>📁 Case Studies</h3>
+            <div class="case-list">
+                
+                
+                <div class="case-item">
+                    <a href="/portfolio/incidents/example-ransomware-investigation/">
+                        <div class="case-title">LockBit 3.0 Ransomware via Phishing Email</div>
+                        <div class="case-meta">
+                            <span class="severity severity-critical">CRITICAL</span>
+                            <span class="incident-type">Ransomware</span>
+                        </div>
+                    </a>
+                </div>
+                
+                
 
-        
-          <span class="post-tags">
-            
-            #<a href="https://pattyti.github.io/portfolio/tags/ransomware/">ransomware</a>&nbsp;
-            
-            #<a href="https://pattyti.github.io/portfolio/tags/lockbit/">lockbit</a>&nbsp;
-            
-            #<a href="https://pattyti.github.io/portfolio/tags/phishing/">phishing</a>&nbsp;
-            
-            #<a href="https://pattyti.github.io/portfolio/tags/lateral-movement/">lateral-movement</a>&nbsp;
-            
-            #<a href="https://pattyti.github.io/portfolio/tags/windows-forensics/">windows-forensics</a>&nbsp;
-            
-          </span>
-        
+                
+            </div>
+        </div>
+    </aside>
+</div>
 
-        
+<style>
+    .incidents-container {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 2.5rem;
+        max-width: 1600px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 
+    .incidents-main {
+        min-width: 0;
+         
+    }
 
-        <div class="post-content">
-          
-            <h2 id="executive-summary">Executive Summary</h2>
-<p>On August 15, 2024, Acme Co. experienced a LockBit 3.0 ransomware attack that encrypted approximately 2.3TB of data across three file servers and 47 mapped network drives. The initial infection vector was a malicious ZIP attachment opened by an employee accessing personal Gmail on their corporate workstation (ACME-WKS-0247).</p>
-<p>The adversary achieved initial execution at <strong>13:47 UTC</strong>, established persistence, disabled Windows Defender and Volume Shadow Copy Service, and began encryption at <strong>14:18 UTC</strong>. The attack was detected 5 minutes into the encryption phase when multiple users reported inaccessible files.</p>
-          
+    .incidents-sidebar {
+        position: relative;
+    }
+
+    .sidebar-sticky {
+        position: sticky;
+        top: 2rem;
+        background: var(--code-bg, #f5f0e8);
+        border: 2px solid var(--accent, #df7020);
+        border-radius: 4px;
+        padding: 1.5rem;
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+    }
+
+    .sidebar-sticky h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: var(--accent, #df7020);
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(--accent, #df7020);
+        padding-bottom: 0.5rem;
+    }
+
+    .case-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .case-item {
+        background: var(--background, #fffbf7);
+        border: 1px solid var(--border-color, #df7020);
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    .case-item:hover {
+        transform: translateX(4px);
+        box-shadow: -4px 4px 0 var(--accent, #df7020);
+    }
+
+    .case-item a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--foreground, #45372b);
+    }
+
+    .case-title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--foreground, #45372b);
+    }
+
+    .case-meta {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+    }
+
+    .severity {
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+    }
+
+    .severity-critical {
+        background: #ff4444;
+        color: white;
+    }
+
+    .severity-high {
+        background: #ff8800;
+        color: white;
+    }
+
+    .severity-medium {
+        background: #ffbb00;
+        color: #000;
+    }
+
+    .severity-low {
+        background: #00aa00;
+        color: white;
+    }
+
+    .incident-type {
+        background: var(--code-bg, #f5f0e8);
+        padding: 2px 8px;
+        border-radius: 3px;
+        border: 1px solid var(--border-color, #df7020);
+    }
+
+    .no-cases {
+        text-align: center;
+        padding: 2rem 1rem;
+        opacity: 0.6;
+    }
+
+     
+    .framework-section {
+        margin: 2rem 0;
+        border: 2px solid var(--accent, #df7020);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .framework-section summary {
+        background: var(--code-bg, #f5f0e8);
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--accent, #df7020);
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: background 0.2s ease;
+    }
+
+    .framework-section summary:hover {
+        background: var(--accent, #df7020);
+        color: var(--background, #fffbf7);
+    }
+
+    .framework-section summary::marker {
+        content: '▶ ';
+        font-size: 0.8em;
+    }
+
+    .framework-section[open] summary::marker {
+        content: '▼ ';
+    }
+
+    .framework-content {
+        padding: 1.5rem;
+        background: var(--background, #fffbf7);
+    }
+
+    .framework-content h4 {
+        color: var(--accent, #df7020);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .framework-content h4:first-child {
+        margin-top: 0;
+    }
+
+    .framework-content ul {
+        margin: 0.5rem 0;
+    }
+
+    .framework-content ol {
+        margin: 0.5rem 0;
+    }
+
+     
+    @media (max-width: 1200px) {
+        .incidents-container {
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .incidents-container {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        .incidents-sidebar {
+            order: -1;
+             
+        }
+
+        .sidebar-sticky {
+            position: static;
+            max-height: none;
+        }
+    }
+
+    @media (min-width: 1800px) {
+        .incidents-container {
+            max-width: 1800px;
+        }
+    }
+
+     
+    .sidebar-sticky::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .sidebar-sticky::-webkit-scrollbar-track {
+        background: var(--background, #fffbf7);
+    }
+
+    .sidebar-sticky::-webkit-scrollbar-thumb {
+        background: var(--accent, #df7020);
+        border-radius: 4px;
+    }
+
+    .sidebar-sticky::-webkit-scrollbar-thumb:hover {
+        background: var(--foreground, #45372b);
+    }
+</style>
+
         </div>
 
         
-           <div>
-            <a class="read-more button inline" href="/portfolio/incidents/example-ransomware-investigation/">[]</a>
-          </div>
-        
-      </article>
-    
-
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-    
-  </div>
-</div>
-
-  </div>
-
-  </div>
-
-  
-    <footer class="footer">
+        <footer class="footer">
   <div class="footer__inner">
     
       <div class="copyright">
@@ -398,8 +625,9 @@ Technical depth: Artifact-level analysis, not just high-level summaries Methodol
 
 
 
-  
-</div>
+        
+    </div>
 
 </body>
+
 </html>

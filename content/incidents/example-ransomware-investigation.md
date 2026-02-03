@@ -1,6 +1,8 @@
 ---
 title: 'LockBit 3.0 Ransomware via Phishing Email'
 date: '2024-08-15T00:00:00-05:00'
+type: "incidents"
+layout: "single"
 draft: false
 
 # Incident Metadata

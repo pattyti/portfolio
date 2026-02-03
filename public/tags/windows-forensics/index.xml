@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows-Forensics on Patrick Jones</title>
-    <link>https://pattyti.github.io/portfolio/tags/windows-forensics/</link>
+    <link>http://localhost:1313/portfolio/tags/windows-forensics/</link>
     <description>Recent content in Windows-Forensics on Patrick Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Aug 2024 00:00:00 -0500</lastBuildDate>
-    <atom:link href="https://pattyti.github.io/portfolio/tags/windows-forensics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/tags/windows-forensics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LockBit 3.0 Ransomware via Phishing Email</title>
-      <link>https://pattyti.github.io/portfolio/incidents/example-ransomware-investigation/</link>
+      <link>http://localhost:1313/portfolio/incidents/example-ransomware-investigation/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 -0500</pubDate>
-      <guid>https://pattyti.github.io/portfolio/incidents/example-ransomware-investigation/</guid>
+      <guid>http://localhost:1313/portfolio/incidents/example-ransomware-investigation/</guid>
       <description>&lt;h2 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h2&gt;&#xA;&lt;p&gt;On August 15, 2024, Acme Co. experienced a LockBit 3.0 ransomware attack that encrypted approximately 2.3TB of data across three file servers and 47 mapped network drives. The initial infection vector was a malicious ZIP attachment opened by an employee accessing personal Gmail on their corporate workstation (ACME-WKS-0247).&lt;/p&gt;&#xA;&lt;p&gt;The adversary achieved initial execution at &lt;strong&gt;13:47 UTC&lt;/strong&gt;, established persistence, disabled Windows Defender and Volume Shadow Copy Service, and began encryption at &lt;strong&gt;14:18 UTC&lt;/strong&gt;. The attack was detected 5 minutes into the encryption phase when multiple users reported inaccessible files.&lt;/p&gt;</description>
     </item>
   </channel>

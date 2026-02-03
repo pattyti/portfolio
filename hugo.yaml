@@ -26,6 +26,10 @@ menu:
       name: "~/lab"
       url: /lab/
       weight: 30
+    - identifier: incidents
+      name: "/cases"
+      url: /incidents/
+      weight: 35
     - identifier: posts
       name: "/var/logs"
       url: /posts/

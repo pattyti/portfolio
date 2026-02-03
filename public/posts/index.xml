@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Patrick Jones</title>
+    <link>https://pattyti.github.io/portfolio/posts/</link>
+    <description>Recent content in Posts on Patrick Jones</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://pattyti.github.io/portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visualizing Forensics: The TLN Vim Profile</title>
+      <link>https://pattyti.github.io/portfolio/posts/tln-vim-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pattyti.github.io/portfolio/posts/tln-vim-workflow/</guid>
+      <description>&lt;h2 id=&#34;the-problem-timeline-fatigue&#34;&gt;The Problem: Timeline Fatigue&lt;/h2&gt;&#xA;&lt;p&gt;In major incident response engagements, &amp;ldquo;Excel fatigue&amp;rdquo; is real. staring at a CSV with 5 million rows from &lt;code&gt;log2timeline&lt;/code&gt; is a quick way to miss lateral movement.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-solution-a-vim-based-workflow&#34;&gt;The Solution: A Vim-Based Workflow&lt;/h2&gt;&#xA;&lt;p&gt;I developed a workflow to process disk images while keeping the analysis environment lightweight and keyboard-centric.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-extraction&#34;&gt;1. Extraction&lt;/h3&gt;&#xA;&lt;p&gt;Processing the raw disk image using &lt;strong&gt;Plaso&lt;/strong&gt; to generate a bodyfile.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-conversion&#34;&gt;2. Conversion&lt;/h3&gt;&#xA;&lt;p&gt;Converting the bodyfile to the &lt;strong&gt;TLN (Time Line)&lt;/strong&gt; format. This format is superior for quick scanning because of its epoch-time sorting and pipe-delimited structure.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

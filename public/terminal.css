@@ -1,0 +1,33 @@
+:root {
+  --background: #fffbf7;
+  --foreground: #45372b;
+  --accent: #df7020;
+
+  /* Applying to Theme Specifics */
+  --color: var(--foreground);
+  --bg-color: var(--background);
+  --accent-color: var(--accent);
+  
+  /* Ensuring code blocks remain readable */
+  --code-bg: #f5f0e8; 
+  --border-color: #df7020;
+}
+
+/* Optional: Subtle tweak for that "Forensic Report" feel */
+/*body {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+/* Making links pop with your orange accent */
+/*a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--accent);
+}

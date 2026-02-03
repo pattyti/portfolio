@@ -126,6 +126,6 @@ Before diving into specific cases, understanding the investigative approach for 
 
 ## Case Studies
 
-Below are detailed investigations from real incidents (sanitized to protect confidentiality):
+Below are detailed sample investigations from my career in DFIR and SOC operations. These are not real incidents, but rather simulations of real incidents.
 
 <!-- Individual case studies will be added here -->
